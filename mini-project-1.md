@@ -1,8 +1,6 @@
 Mini Data-Analysis Deliverable 1
 ================
 
-# Mini Data-Analysis Deliveravle 1
-
 # Welcome to your (maybe) first-ever data analysis project!
 
 And hopefully the first of many. Let’s get started:
