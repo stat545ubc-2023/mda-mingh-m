@@ -405,11 +405,7 @@ is dplyr and ggplot2.
 
 ![](mini-project-1_files/figure-markdown_strict/unnamed-chunk-6-1.png)
 
-1.  Create a new variable based on other variables in your data (only if
-    it makes sense)
-2.  Investigate how many missing values there are per variable. Can you
-    find a way to plot this?
-3.  Explore the relationship between 2 variables in a plot.
+1.  Explore the relationship between 2 variables in a plot.
 
 <!-- -->
 
@@ -433,12 +429,12 @@ is dplyr and ggplot2.
       scale_color_manual(values=c("M"="red", "B"="blue"), name="Diagnosis")
 
 ![](mini-project-1_files/figure-markdown_strict/unnamed-chunk-7-1.png)
-5. Filter observations in your data according to your own criteria.
-Think of what you’d like to explore - again, if this was the `titanic`
-dataset, I may want to narrow my search down to passengers born in a
-particular year… 6. Use a boxplot to look at the frequency of different
-observations within a single variable. You can do this for more than one
-variable if you wish!
+
+1.  Use a boxplot to look at the frequency of different observations
+    within a single variable. You can do this for more than one variable
+    if you wish!
+
+<!-- -->
 
     # Plot a boxplot of 'concave_points_mean' based on the diagnosis (malignant vs. benign)
 
@@ -456,10 +452,11 @@ variable if you wish!
       theme(plot.title = element_text(hjust = 0.5))
 
 ![](mini-project-1_files/figure-markdown_strict/unnamed-chunk-8-1.png)
-7. Make a new tibble with a subset of your data, with variables and
-observations that you are interested in exploring. 8. Use a density plot
-to explore any of your variables (that are suitable for this type of
-plot).
+
+1.  Use a density plot to explore any of your variables (that are
+    suitable for this type of plot).
+
+<!-- -->
 
     # Plotting the distribution of 'radius_mean'
 
