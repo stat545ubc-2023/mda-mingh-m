@@ -144,7 +144,13 @@ understand your data.
 
 <!-------------------------- Start your work below ---------------------------->
 
-1: cancer\_sample 2: steam\_games 3: flow\_sample 4: parking\_meters
+1: cancer\_sample
+
+2: steam\_games
+
+3: flow\_sample
+
+4: parking\_meters
 
 <!----------------------------------------------------------------------------->
 
@@ -188,6 +194,8 @@ comments outside of the code chunk?
     class(steam_games)
 
     ## [1] "spec_tbl_df" "tbl_df"      "tbl"         "data.frame"
+
+------------------------------------------------------------------------
 
     ### EXPLORE **cancer_sample** HERE ###
     # Check the numbers of row and column in dataset
@@ -238,6 +246,8 @@ comments outside of the code chunk?
 
     ## [1] "spec_tbl_df" "tbl_df"      "tbl"         "data.frame"
 
+------------------------------------------------------------------------
+
     ### EXPLORE **flow_sample** HERE ###
     # Check the numbers of row and column in dataset
     dim(flow_sample)
@@ -261,6 +271,8 @@ comments outside of the code chunk?
     class(flow_sample)
 
     ## [1] "tbl_df"     "tbl"        "data.frame"
+
+------------------------------------------------------------------------
 
     ### EXPLORE **parking_meters** HERE ###
     # Check the numbers of row and column in dataset
@@ -309,10 +321,12 @@ to choose this one? Briefly explain your choice below.
 
 <!-------------------------- Start your work below ---------------------------->
 
-**Dataset selected**: cancer\_sample **Reason**: My thesis project is
-also a clinical study. The cancer\_sample dataset can help me think
-about how these variables relate to each other and how the analysis
-informs about the subjects’ condition.
+**Dataset selected**: cancer\_sample
+
+**Reason**: My thesis project is also a clinical study. The
+cancer\_sample dataset can help me think about how these variables
+relate to each other and how the analysis informs about the subjects’
+condition.
 <!----------------------------------------------------------------------------->
 
 1.4 **(2 points)** Time for a final decision! Going back to the
@@ -556,7 +570,9 @@ Write the 4 questions and any additional comments below.
 
 > This question investigates if a larger tumor tends to have more
 > concave points and which variable is a more reliable indicator of
-> malignancy. <!----------------------------->
+> malignancy.
+
+<!----------------------------->
 
 # Overall reproducibility/Cleanliness/Coherence Checklist
 
