@@ -404,10 +404,14 @@ is dplyr and ggplot2.
       theme(plot.title = element_text(hjust = 0.5))
 
 ![](mini-project-1_files/figure-markdown_strict/unnamed-chunk-6-1.png)
-2. Create a new variable based on other variables in your data (only if
-it makes sense) 3. Investigate how many missing values there are per
-variable. Can you find a way to plot this? 4. Explore the relationship
-between 2 variables in a plot.
+
+1.  Create a new variable based on other variables in your data (only if
+    it makes sense)
+2.  Investigate how many missing values there are per variable. Can you
+    find a way to plot this?
+3.  Explore the relationship between 2 variables in a plot.
+
+<!-- -->
 
     # Create a scatter plot to explore the relationship of mean radius and mean concave points
 
