@@ -381,9 +381,7 @@ base R functions for certain tasks, and that’s just fine! But part of
 this project is for you to practice the tools we learned in class, which
 is dplyr and ggplot2.
 
-1.  Plot the distribution of a numeric variable.
-
-<!-- -->
+1.Plot the distribution of a numeric variable.
 
     # Using the ggplot2 package to visualize the distribution of 'concave_points_mean' in the 'cancer_sample' dataset.
 
@@ -405,9 +403,7 @@ is dplyr and ggplot2.
 
 ![](mini-project-1_files/figure-markdown_strict/unnamed-chunk-6-1.png)
 
-1.  Explore the relationship between 2 variables in a plot.
-
-<!-- -->
+4.Explore the relationship between 2 variables in a plot.
 
     # Create a scatter plot to explore the relationship of mean radius and mean concave points
 
@@ -430,11 +426,9 @@ is dplyr and ggplot2.
 
 ![](mini-project-1_files/figure-markdown_strict/unnamed-chunk-7-1.png)
 
-1.  Use a boxplot to look at the frequency of different observations
-    within a single variable. You can do this for more than one variable
-    if you wish!
-
-<!-- -->
+6.Use a boxplot to look at the frequency of different observations
+within a single variable. You can do this for more than one variable if
+you wish!
 
     # Plot a boxplot of 'concave_points_mean' based on the diagnosis (malignant vs. benign)
 
@@ -453,10 +447,8 @@ is dplyr and ggplot2.
 
 ![](mini-project-1_files/figure-markdown_strict/unnamed-chunk-8-1.png)
 
-1.  Use a density plot to explore any of your variables (that are
-    suitable for this type of plot).
-
-<!-- -->
+8.Use a density plot to explore any of your variables (that are suitable
+for this type of plot).
 
     # Plotting the distribution of 'radius_mean'
 
