@@ -1,3 +1,8 @@
+Mini Data-Analysis Deliverable 1
+================
+
+# Mini Data-Analysis Deliveravle 1
+
 # Welcome to your (maybe) first-ever data analysis project!
 
 And hopefully the first of many. Let’s get started:
@@ -10,12 +15,12 @@ And hopefully the first of many. Let’s get started:
     install.packages("devtools")
     devtools::install_github("UBC-MDS/datateachr")
 
-1.  Load the packages below.
+2.  Load the packages below.
 
-<!-- -->
-
-    library(datateachr)
-    library(tidyverse)
+``` r
+library(datateachr)
+library(tidyverse)
+```
 
     ## Warning: package 'tidyverse' was built under R version 4.3.1
 
@@ -30,7 +35,7 @@ And hopefully the first of many. Let’s get started:
     ## ✖ dplyr::lag()    masks stats::lag()
     ## ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
 
-1.  Make a repository in the <https://github.com/stat545ubc-2023>
+3.  Make a repository in the <https://github.com/stat545ubc-2023>
     Organization. You can do this by following the steps found on canvas
     in the entry called [MDA: Create a
     repository](https://canvas.ubc.ca/courses/126199/pages/mda-create-a-repository).
@@ -41,22 +46,22 @@ And hopefully the first of many. Let’s get started:
 
 ## For Both Milestones
 
--   Each milestone has explicit tasks. Tasks that are more challenging
-    will often be allocated more points.
+- Each milestone has explicit tasks. Tasks that are more challenging
+  will often be allocated more points.
 
--   Each milestone will be also graded for reproducibility, cleanliness,
-    and coherence of the overall Github submission.
+- Each milestone will be also graded for reproducibility, cleanliness,
+  and coherence of the overall Github submission.
 
--   While the two milestones will be submitted as independent
-    deliverables, the analysis itself is a continuum - think of it as
-    two chapters to a story. Each chapter, or in this case, portion of
-    your analysis, should be easily followed through by someone
-    unfamiliar with the content.
-    [Here](https://swcarpentry.github.io/r-novice-inflammation/06-best-practices-R/)
-    is a good resource for what constitutes “good code”. Learning good
-    coding practices early in your career will save you hassle later on!
+- While the two milestones will be submitted as independent
+  deliverables, the analysis itself is a continuum - think of it as two
+  chapters to a story. Each chapter, or in this case, portion of your
+  analysis, should be easily followed through by someone unfamiliar with
+  the content.
+  [Here](https://swcarpentry.github.io/r-novice-inflammation/06-best-practices-R/)
+  is a good resource for what constitutes “good code”. Learning good
+  coding practices early in your career will save you hassle later on!
 
--   The milestones will be equally weighted.
+- The milestones will be equally weighted.
 
 ## For Milestone 1
 
@@ -80,11 +85,11 @@ submission.
 
 By the end of this milestone, you should:
 
--   Become familiar with your dataset of choosing
--   Select 4 questions that you would like to answer with your data
--   Generate a reproducible and clear report using R Markdown
--   Become familiar with manipulating and summarizing your data in
-    tibbles using `dplyr`, with a research question in mind.
+- Become familiar with your dataset of choosing
+- Select 4 questions that you would like to answer with your data
+- Generate a reproducible and clear report using R Markdown
+- Become familiar with manipulating and summarizing your data in tibbles
+  using `dplyr`, with a research question in mind.
 
 # Task 1: Choose your favorite dataset
 
@@ -92,42 +97,42 @@ The `datateachr` package by Hayley Boyce and Jordan Bourak currently
 composed of 7 semi-tidy datasets for educational purposes. Here is a
 brief description of each dataset:
 
--   *apt\_buildings*: Acquired courtesy of The City of Toronto’s Open
-    Data Portal. It currently has 3455 rows and 37 columns.
+- *apt_buildings*: Acquired courtesy of The City of Toronto’s Open Data
+  Portal. It currently has 3455 rows and 37 columns.
 
--   *building\_permits*: Acquired courtesy of The City of Vancouver’s
-    Open Data Portal. It currently has 20680 rows and 14 columns.
+- *building_permits*: Acquired courtesy of The City of Vancouver’s Open
+  Data Portal. It currently has 20680 rows and 14 columns.
 
--   *cancer\_sample*: Acquired courtesy of UCI Machine Learning
-    Repository. It currently has 569 rows and 32 columns.
+- *cancer_sample*: Acquired courtesy of UCI Machine Learning Repository.
+  It currently has 569 rows and 32 columns.
 
--   *flow\_sample*: Acquired courtesy of The Government of Canada’s
-    Historical Hydrometric Database. It currently has 218 rows and 7
-    columns.
+- *flow_sample*: Acquired courtesy of The Government of Canada’s
+  Historical Hydrometric Database. It currently has 218 rows and 7
+  columns.
 
--   *parking\_meters*: Acquired courtesy of The City of Vancouver’s Open
-    Data Portal. It currently has 10032 rows and 22 columns.
+- *parking_meters*: Acquired courtesy of The City of Vancouver’s Open
+  Data Portal. It currently has 10032 rows and 22 columns.
 
--   *steam\_games*: Acquired courtesy of Kaggle. It currently has 40833
-    rows and 21 columns.
+- *steam_games*: Acquired courtesy of Kaggle. It currently has 40833
+  rows and 21 columns.
 
--   *vancouver\_trees*: Acquired courtesy of The City of Vancouver’s
-    Open Data Portal. It currently has 146611 rows and 20 columns.
+- *vancouver_trees*: Acquired courtesy of The City of Vancouver’s Open
+  Data Portal. It currently has 146611 rows and 20 columns.
 
 **Things to keep in mind**
 
--   We hope that this project will serve as practice for carrying our
-    your own *independent* data analysis. Remember to comment your code,
-    be explicit about what you are doing, and write notes in this
-    markdown document when you feel that context is required. As you
-    advance in the project, prompts and hints to do this will be
-    diminished - it’ll be up to you!
+- We hope that this project will serve as practice for carrying our your
+  own *independent* data analysis. Remember to comment your code, be
+  explicit about what you are doing, and write notes in this markdown
+  document when you feel that context is required. As you advance in the
+  project, prompts and hints to do this will be diminished - it’ll be up
+  to you!
 
--   Before choosing a dataset, you should always keep in mind **your
-    goal**, or in other ways, *what you wish to achieve with this data*.
-    This mini data-analysis project focuses on *data wrangling*,
-    *tidying*, and *visualization*. In short, it’s a way for you to get
-    your feet wet with exploring data on your own.
+- Before choosing a dataset, you should always keep in mind **your
+  goal**, or in other ways, *what you wish to achieve with this data*.
+  This mini data-analysis project focuses on *data wrangling*,
+  *tidying*, and *visualization*. In short, it’s a way for you to get
+  your feet wet with exploring data on your own.
 
 And that is exactly the first thing that you will do!
 
@@ -144,13 +149,13 @@ understand your data.
 
 <!-------------------------- Start your work below ---------------------------->
 
-1: cancer\_sample
+1: cancer_sample
 
-2: steam\_games
+2: steam_games
 
-3: flow\_sample
+3: flow_sample
 
-4: parking\_meters
+4: parking_meters
 
 <!----------------------------------------------------------------------------->
 
@@ -167,14 +172,18 @@ comments outside of the code chunk?
 
 <!-------------------------- Start your work below ---------------------------->
 
-    ### EXPLORE **steam_games** HERE ###
-    # Check the numbers of row and column in steam_games
-    dim(steam_games)
+``` r
+### EXPLORE **steam_games** HERE ###
+# Check the numbers of row and column in steam_games
+dim(steam_games)
+```
 
     ## [1] 40833    21
 
-    # Check the names of each column and the first six rows
-    head(steam_games)
+``` r
+# Check the names of each column and the first six rows
+head(steam_games)
+```
 
     ## # A tibble: 6 × 21
     ##      id url     types name  desc_snippet recent_reviews all_reviews release_date
@@ -190,21 +199,27 @@ comments outside of the code chunk?
     ## #   game_description <chr>, mature_content <chr>, minimum_requirements <chr>,
     ## #   recommended_requirements <chr>, original_price <dbl>, discount_price <dbl>
 
-    # Check the type of the dataset **(tibble vs. data.frame)**
-    class(steam_games)
+``` r
+# Check the type of the dataset **(tibble vs. data.frame)**
+class(steam_games)
+```
 
     ## [1] "spec_tbl_df" "tbl_df"      "tbl"         "data.frame"
 
 ------------------------------------------------------------------------
 
-    ### EXPLORE **cancer_sample** HERE ###
-    # Check the numbers of row and column in dataset
-    dim(cancer_sample)
+``` r
+### EXPLORE **cancer_sample** HERE ###
+# Check the numbers of row and column in dataset
+dim(cancer_sample)
+```
 
     ## [1] 569  32
 
-    # Check the size of dataset and first few entries of each variable
-    glimpse(cancer_sample)
+``` r
+# Check the size of dataset and first few entries of each variable
+glimpse(cancer_sample)
+```
 
     ## Rows: 569
     ## Columns: 32
@@ -241,21 +256,27 @@ comments outside of the code chunk?
     ## $ symmetry_worst          <dbl> 0.4601, 0.2750, 0.3613, 0.6638, 0.2364, 0.3985…
     ## $ fractal_dimension_worst <dbl> 0.11890, 0.08902, 0.08758, 0.17300, 0.07678, 0…
 
-    # Check the type of the dataset **(tibble vs. data.frame)**
-    class(cancer_sample)
+``` r
+# Check the type of the dataset **(tibble vs. data.frame)**
+class(cancer_sample)
+```
 
     ## [1] "spec_tbl_df" "tbl_df"      "tbl"         "data.frame"
 
 ------------------------------------------------------------------------
 
-    ### EXPLORE **flow_sample** HERE ###
-    # Check the numbers of row and column in dataset
-    dim(flow_sample)
+``` r
+### EXPLORE **flow_sample** HERE ###
+# Check the numbers of row and column in dataset
+dim(flow_sample)
+```
 
     ## [1] 218   7
 
-    # Check the names of each column and the first six rows
-    head(flow_sample)
+``` r
+# Check the names of each column and the first six rows
+head(flow_sample)
+```
 
     ## # A tibble: 6 × 7
     ##   station_id  year extreme_type month   day  flow sym  
@@ -267,21 +288,27 @@ comments outside of the code chunk?
     ## 5 05BB001     1913 maximum          6    11   232 <NA> 
     ## 6 05BB001     1914 maximum          6    18   214 <NA>
 
-    # Check the type of the dataset **(tibble vs. data.frame)**
-    class(flow_sample)
+``` r
+# Check the type of the dataset **(tibble vs. data.frame)**
+class(flow_sample)
+```
 
     ## [1] "tbl_df"     "tbl"        "data.frame"
 
 ------------------------------------------------------------------------
 
-    ### EXPLORE **parking_meters** HERE ###
-    # Check the numbers of row and column in dataset
-    dim(parking_meters)
+``` r
+### EXPLORE **parking_meters** HERE ###
+# Check the numbers of row and column in dataset
+dim(parking_meters)
+```
 
     ## [1] 10032    22
 
-    # Check the size of dataset and first few entries of each variable
-    glimpse(parking_meters)
+``` r
+# Check the size of dataset and first few entries of each variable
+glimpse(parking_meters)
+```
 
     ## Rows: 10,032
     ## Columns: 22
@@ -308,8 +335,10 @@ comments outside of the code chunk?
     ## $ geo_local_area <chr> "West End", "Strathcona", "Riley Park", "West Point Gre…
     ## $ meter_id       <chr> "670805", "471405", "C80145", "D03704", "301023", "5913…
 
-    # Check the type of the dataset **(tibble vs. data.frame)**
-    class(parking_meters)
+``` r
+# Check the type of the dataset **(tibble vs. data.frame)**
+class(parking_meters)
+```
 
     ## [1] "tbl_df"     "tbl"        "data.frame"
 
@@ -321,11 +350,11 @@ to choose this one? Briefly explain your choice below.
 
 <!-------------------------- Start your work below ---------------------------->
 
-**Dataset selected**: cancer\_sample
+**Dataset selected**: cancer_sample
 
 **Reason**: My thesis project is also a clinical study. The
-cancer\_sample dataset can help me think about how these variables
-relate to each other and how the analysis informs about the subjects’
+cancer_sample dataset can help me think about how these variables relate
+to each other and how the analysis informs about the subjects’
 condition.
 <!----------------------------------------------------------------------------->
 
@@ -383,87 +412,95 @@ is dplyr and ggplot2.
 
 1.Plot the distribution of a numeric variable.
 
-    # Using the ggplot2 package to visualize the distribution of 'concave_points_mean' in the 'cancer_sample' dataset.
+``` r
+# Using the ggplot2 package to visualize the distribution of 'concave_points_mean' in the 'cancer_sample' dataset.
 
-    # Start with specifying the data and aesthetic mapping
-    ggplot(cancer_sample, aes(x= concave_points_mean)) +
+# Start with specifying the data and aesthetic mapping
+ggplot(cancer_sample, aes(x= concave_points_mean)) +
 
-      # Create a histogram with 30 bins
-      # The bars are colored blue and have an opacity of 80%
-      geom_histogram(bins=30, fill = "blue", alpha = 0.8) +
+  # Create a histogram with 30 bins
+  # The bars are colored blue and have an opacity of 80%
+  geom_histogram(bins=30, fill = "blue", alpha = 0.8) +
 
-      # Apply a light theme to the background of the plot
-      theme_light() +
+  # Apply a light theme to the background of the plot
+  theme_light() +
 
-      # Set the title of the plot
-      labs(title = "The Distribution of Mean Concave Points") +
+  # Set the title of the plot
+  labs(title = "The Distribution of Mean Concave Points") +
 
-      # Center the title above the plot
-      theme(plot.title = element_text(hjust = 0.5))
+  # Center the title above the plot
+  theme(plot.title = element_text(hjust = 0.5))
+```
 
-![](mini-project-1_files/figure-markdown_strict/unnamed-chunk-6-1.png)
+![](mini-project-1_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
 
 4.Explore the relationship between 2 variables in a plot.
 
-    # Create a scatter plot to explore the relationship of mean radius and mean concave points
+``` r
+# Create a scatter plot to explore the relationship of mean radius and mean concave points
 
-    # Start by specifying the data and aesthetic mappings for x and y axes
-    ggplot(cancer_sample, aes(x=radius_mean, y=concave_points_mean)) +
+# Start by specifying the data and aesthetic mappings for x and y axes
+ggplot(cancer_sample, aes(x=radius_mean, y=concave_points_mean)) +
 
-      # Create a scatter plot with data points colored based on diagnosis (either M or B)
-      # Set the opacity of the points to 0.6
-      geom_point(aes(color=diagnosis), alpha=0.6) + 
+  # Create a scatter plot with data points colored based on diagnosis (either M or B)
+  # Set the opacity of the points to 0.6
+  geom_point(aes(color=diagnosis), alpha=0.6) + 
 
-      # Apply a minimalistic theme to the plot
-      theme_minimal() + 
+  # Apply a minimalistic theme to the plot
+  theme_minimal() + 
 
-      # Set the title of the plot and labels for x and y axes
-      labs(title="Relationship between Mean Radius and Mean Concave Points",
-           x="Radius Mean", y="Concave Points Mean") + 
+  # Set the title of the plot and labels for x and y axes
+  labs(title="Relationship between Mean Radius and Mean Concave Points",
+       x="Radius Mean", y="Concave Points Mean") + 
 
-      # Manually specify the colors for the diagnoses: red for Malignant (M) and blue for Benign (B)
-      scale_color_manual(values=c("M"="red", "B"="blue"), name="Diagnosis")
+  # Manually specify the colors for the diagnoses: red for Malignant (M) and blue for Benign (B)
+  scale_color_manual(values=c("M"="red", "B"="blue"), name="Diagnosis")
+```
 
-![](mini-project-1_files/figure-markdown_strict/unnamed-chunk-7-1.png)
+![](mini-project-1_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
 
 6.Use a boxplot to look at the frequency of different observations
 within a single variable. You can do this for more than one variable if
 you wish!
 
-    # Plot a boxplot of 'concave_points_mean' based on the diagnosis (malignant vs. benign)
+``` r
+# Plot a boxplot of 'concave_points_mean' based on the diagnosis (malignant vs. benign)
 
-    # Using ggplot to start the plot with 'cancer_sample' dataset
-    ggplot(cancer_sample) +
+# Using ggplot to start the plot with 'cancer_sample' dataset
+ggplot(cancer_sample) +
 
-      # Display a boxplot for 'concave_points_mean' separated by 'diagnosis', with blue fill and 80% opacity
-      # Adjust the width of the boxplot to 0.5
-      geom_boxplot(aes(x= diagnosis, y = concave_points_mean), width = 0.5, fill="blue", alpha=0.8) +
+  # Display a boxplot for 'concave_points_mean' separated by 'diagnosis', with blue fill and 80% opacity
+  # Adjust the width of the boxplot to 0.5
+  geom_boxplot(aes(x= diagnosis, y = concave_points_mean), width = 0.5, fill="blue", alpha=0.8) +
 
-      # Set plot title and axis labels
-      labs(title="Distribution of Concave Points Mean Based on Diagnosis", x="Diagnosis", y="concave_points_mean")+ 
+  # Set plot title and axis labels
+  labs(title="Distribution of Concave Points Mean Based on Diagnosis", x="Diagnosis", y="concave_points_mean")+ 
 
-      # Center the title text
-      theme(plot.title = element_text(hjust = 0.5))
+  # Center the title text
+  theme(plot.title = element_text(hjust = 0.5))
+```
 
-![](mini-project-1_files/figure-markdown_strict/unnamed-chunk-8-1.png)
+![](mini-project-1_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
 8.Use a density plot to explore any of your variables (that are suitable
 for this type of plot).
 
-    # Plotting the distribution of 'radius_mean'
+``` r
+# Plotting the distribution of 'radius_mean'
 
-    ggplot(cancer_sample) + # select the dataset
-      
-      # Define the x-axis as radius_mean. We can use a density plot for radius_mean because it is a continuous variable. Set color to blue and opacity to 0.5.
-      geom_density(aes(x= radius_mean), fill="red", alpha=0.5) + 
-      
-      # Create the names of x, y-axes and the whole plot.
-      labs(title="Distribution of Radius Mean", x="Radius Mean", y="Density")+ 
-      
-      # Center the title text
-      theme(plot.title = element_text(hjust = 0.5))  
+ggplot(cancer_sample) + # select the dataset
+  
+  # Define the x-axis as radius_mean. We can use a density plot for radius_mean because it is a continuous variable. Set color to blue and opacity to 0.5.
+  geom_density(aes(x= radius_mean), fill="red", alpha=0.5) + 
+  
+  # Create the names of x, y-axes and the whole plot.
+  labs(title="Distribution of Radius Mean", x="Radius Mean", y="Density")+ 
+  
+  # Center the title text
+  theme(plot.title = element_text(hjust = 0.5))  
+```
 
-![](mini-project-1_files/figure-markdown_strict/unnamed-chunk-9-1.png)
+![](mini-project-1_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
 2.2 **(4 points)** For each of the 4 exercises that you complete,
 provide a *brief explanation* of why you chose that exercise in relation
@@ -472,44 +509,43 @@ sufficient comments for a reader to understand your reasoning and code.
 
 <!-------------------------- Start your work below ---------------------------->
 
--   Question 1: Plotting the distribution of the mean of concave points
-    reveals the the pattern and variability of data. Understanding its
-    distribution can provide insights into the nature and severity of
-    the tumors in the dataset. We can use historgram for
-    *concave\_points\_mean* because it is a continuous variable. Line
-    184 specifies the dataset and creates the x-axis. In line 188, a
-    histogram with 30 bins is generated, with bars colored blue at 80%
-    opacity. Line 191 applies a light theme to the background of the
-    plot. Line 194 and 197 sets the title of the plot and centers it.  
--   Question 4: Plotting the relationship between mean radius and mean
-    concave points explores if a tumor with larger radius has more
-    concave points. After selecting the dataset, line 209 set the x-axis
-    as radius\_mean and y-axis as concave\_points\_mean. Line 213
-    differentiate the data points by using different colors based on
-    *diagnosis* and set the opacity to 0.6. Minimal theme is applied and
-    titles for the plot, x-axis, and y-axis are set. Line 222 specifies
-    the colors for the diagnoses: red for Malignant (M) and blue for
-    Benign (B).
--   Question 6: The boxplot shows the difference in the mean of concave
-    points between malignant and benign tumors. I am curious if the
-    number of concave points on tumor can be a indicator of malignancy.
-    After selecting the dataset in line 234, the code uses
-    **geom\_boxplot** function from the **ggplot2** package, with
-    *diagnosis* on the x-axis and *concave\_points\_mean* on the y-axis.
-    The boxplot is styled with a width of 0.5, a blue fill color, and
-    80% opacity. The title of the plot, “Distribution of Concave Points
-    Mean Based on Diagnosis”, and axis labels are clearly defined, with
-    the title being centered for better visual appeal.
--   Question 8: By plotting density plot for mean radius, we can get a
-    smooth and continuous distribution of data for all the patients
-    without the constraints of bins in histogram. I’m curious about
-    where most of mean radius distributes. After selecting the dataset
-    in line 254, the code uses **geom\_density** function from the
-    **ggplot2** package, with *diagnosis* on the x-axis. The density is
-    styled with a red fill color, and 50% opacity. The title of the
-    plot, “Distribution of Radius Mean”, and axis labels are clearly
-    defined, with the title being centered for better visual appeal.  
-    <!----------------------------------------------------------------------------->
+- Question 1: Plotting the distribution of the mean of concave points
+  reveals the the pattern and variability of data. Understanding its
+  distribution can provide insights into the nature and severity of the
+  tumors in the dataset. We can use historgram for *concave_points_mean*
+  because it is a continuous variable. Line 184 specifies the dataset
+  and creates the x-axis. In line 188, a histogram with 30 bins is
+  generated, with bars colored blue at 80% opacity. Line 191 applies a
+  light theme to the background of the plot. Line 194 and 197 sets the
+  title of the plot and centers it.  
+- Question 4: Plotting the relationship between mean radius and mean
+  concave points explores if a tumor with larger radius has more concave
+  points. After selecting the dataset, line 209 set the x-axis as
+  radius_mean and y-axis as concave_points_mean. Line 213 differentiate
+  the data points by using different colors based on *diagnosis* and set
+  the opacity to 0.6. Minimal theme is applied and titles for the plot,
+  x-axis, and y-axis are set. Line 222 specifies the colors for the
+  diagnoses: red for Malignant (M) and blue for Benign (B).
+- Question 6: The boxplot shows the difference in the mean of concave
+  points between malignant and benign tumors. I am curious if the number
+  of concave points on tumor can be a indicator of malignancy. After
+  selecting the dataset in line 234, the code uses **geom_boxplot**
+  function from the **ggplot2** package, with *diagnosis* on the x-axis
+  and *concave_points_mean* on the y-axis. The boxplot is styled with a
+  width of 0.5, a blue fill color, and 80% opacity. The title of the
+  plot, “Distribution of Concave Points Mean Based on Diagnosis”, and
+  axis labels are clearly defined, with the title being centered for
+  better visual appeal.
+- Question 8: By plotting density plot for mean radius, we can get a
+  smooth and continuous distribution of data for all the patients
+  without the constraints of bins in histogram. I’m curious about where
+  most of mean radius distributes. After selecting the dataset in line
+  254, the code uses **geom_density** function from the **ggplot2**
+  package, with *diagnosis* on the x-axis. The density is styled with a
+  red fill color, and 50% opacity. The title of the plot, “Distribution
+  of Radius Mean”, and axis labels are clearly defined, with the title
+  being centered for better visual appeal.  
+  <!----------------------------------------------------------------------------->
 
 # Task 3: Choose research questions
 
@@ -521,7 +557,7 @@ Write the 4 questions and any additional comments below.
 
 <!--- *****START HERE***** --->
 
-1.  Does the worst radius (radius\_worst) of tumors significantly differ
+1.  Does the worst radius (radius_worst) of tumors significantly differ
     between malignant and benign tumors?
 
 > This question explores whether the size of the tumor (in this case,
@@ -530,7 +566,7 @@ Write the 4 questions and any additional comments below.
 > between the two types of tumors, it might serve as a diagnostic
 > marker.
 
-1.  Does the fractal dimension of tumors relate to the concavity in both
+2.  Does the fractal dimension of tumors relate to the concavity in both
     malignant and benign tumors?
 
 > To explore the relationship between two continous variables, a
@@ -538,17 +574,17 @@ Write the 4 questions and any additional comments below.
 > points by “Diagnosis”. I want to explore these two variables because
 > they seem to be related and contribute to malignancy conceptually.
 
-1.  Among tumors diagnosed as malignant, which features (e.g.,
-    smoothness\_mean, compactness\_mean, etc.) are most correlated with
-    larger tumor size (e.g., area\_mean)?
+3.  Among tumors diagnosed as malignant, which features (e.g.,
+    smoothness_mean, compactness_mean, etc.) are most correlated with
+    larger tumor size (e.g., area_mean)?
 
 > If certain features are strongly correlated with larger tumor sizes,
 > it can help prioritize which characteristics to monitor in patients
 > with malignant diagnoses.
 
-1.  What is the relationship between mean area (area\_mean) and the mean
-    of concave points (concave\_points\_mean) in both malignant and
-    benign tumors?
+4.  What is the relationship between mean area (area_mean) and the mean
+    of concave points (concave_points_mean) in both malignant and benign
+    tumors?
 
 > This question investigates if a larger tumor tends to have more
 > concave points and which variable is a more reliable indicator of
@@ -579,13 +615,13 @@ repository on GitHub.
 
 Minimum contents of the README file:
 
--   In a sentence or two, explains what this repository is, so that
-    future-you or someone else stumbling on your repository can be
-    oriented to the repository.
--   In a sentence or two (or more??), briefly explains how to engage
-    with the repository. You can assume the person reading knows the
-    material from STAT 545A. Basically, if a visitor to your repository
-    wants to explore your project, what should they know?
+- In a sentence or two, explains what this repository is, so that
+  future-you or someone else stumbling on your repository can be
+  oriented to the repository.
+- In a sentence or two (or more??), briefly explains how to engage with
+  the repository. You can assume the person reading knows the material
+  from STAT 545A. Basically, if a visitor to your repository wants to
+  explore your project, what should they know?
 
 Once you get in the habit of making README files, and seeing more README
 files in other projects, you’ll wonder how you ever got by without them!
@@ -595,16 +631,16 @@ They are tremendously helpful.
 
 All output is readable, recent and relevant:
 
--   All Rmd files have been `knit`ted to their output md files.
--   All knitted md files are viewable without errors on Github. Examples
-    of errors: Missing plots, “Sorry about that, but we can’t show files
-    that are this big right now” messages, error messages from broken R
-    code
--   All of these output files are up-to-date – that is, they haven’t
-    fallen behind after the source (Rmd) files have been updated.
--   There should be no relic output files. For example, if you were
-    knitting an Rmd to html, but then changed the output to be only a
-    markdown file, then the html file is a relic and should be deleted.
+- All Rmd files have been `knit`ted to their output md files.
+- All knitted md files are viewable without errors on Github. Examples
+  of errors: Missing plots, “Sorry about that, but we can’t show files
+  that are this big right now” messages, error messages from broken R
+  code
+- All of these output files are up-to-date – that is, they haven’t
+  fallen behind after the source (Rmd) files have been updated.
+- There should be no relic output files. For example, if you were
+  knitting an Rmd to html, but then changed the output to be only a
+  markdown file, then the html file is a relic and should be deleted.
 
 (0.5 point deduction if any of the above criteria are not met. 1 point
 deduction if most or all of the above criteria are not met.)
