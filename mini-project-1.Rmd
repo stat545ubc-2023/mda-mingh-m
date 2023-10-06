@@ -1,6 +1,6 @@
 ---
 title: "Mini Data-Analysis Deliverable 1"
-output: md_document
+output: github_document
 ---
 
 # Welcome to your (maybe) first-ever data analysis project!
@@ -85,8 +85,11 @@ And that is exactly the first thing that you will do!
 <!-------------------------- Start your work below ---------------------------->
 
 1: cancer_sample 
+
 2: steam_games 
+
 3: flow_sample 
+
 4: parking_meters 
 
 <!----------------------------------------------------------------------------->
@@ -109,6 +112,7 @@ head(steam_games)
 class(steam_games)
 
 ```
+---
 
 ```{r}
 ### EXPLORE **cancer_sample** HERE ###
@@ -121,6 +125,7 @@ glimpse(cancer_sample)
 # Check the type of the dataset **(tibble vs. data.frame)**
 class(cancer_sample)
 ```
+---
 
 ```{r}
 ### EXPLORE **flow_sample** HERE ###
@@ -133,6 +138,7 @@ head(flow_sample)
 # Check the type of the dataset **(tibble vs. data.frame)**
 class(flow_sample)
 ```
+---
 
 ```{r}
 ### EXPLORE **parking_meters** HERE ###
@@ -152,6 +158,7 @@ class(parking_meters)
 
 <!-------------------------- Start your work below ---------------------------->
 **Dataset selected**: cancer_sample 
+
 **Reason**: My thesis project is also a clinical study. The cancer_sample dataset can help me think about how these variables relate to each other and how the analysis informs about the subjects' condition. 
 <!----------------------------------------------------------------------------->
 
@@ -175,8 +182,7 @@ If we rewind and go back to the learning objectives, you'll see that by the end 
 
 Make sure that you're using dplyr and ggplot2 rather than base R for this task. Outside of this project, you may find that you prefer using base R functions for certain tasks, and that's just fine! But part of this project is for you to practice the tools we learned in class, which is dplyr and ggplot2.
 
-1.  Plot the distribution of a numeric variable.
-
+1.Plot the distribution of a numeric variable.
 ```{r}
 # Using the ggplot2 package to visualize the distribution of 'concave_points_mean' in the 'cancer_sample' dataset.
 
@@ -198,10 +204,7 @@ ggplot(cancer_sample, aes(x= concave_points_mean)) +
   
 ```
 
-2.  Create a new variable based on other variables in your data (only if it makes sense)
-3.  Investigate how many missing values there are per variable. Can you find a way to plot this?
-4.  Explore the relationship between 2 variables in a plot.
-
+4.Explore the relationship between 2 variables in a plot.
 ```{r}
 # Create a scatter plot to explore the relationship of mean radius and mean concave points
 
@@ -224,9 +227,7 @@ ggplot(cancer_sample, aes(x=radius_mean, y=concave_points_mean)) +
 
 ```
 
-5.  Filter observations in your data according to your own criteria. Think of what you'd like to explore - again, if this was the `titanic` dataset, I may want to narrow my search down to passengers born in a particular year...
-6.  Use a boxplot to look at the frequency of different observations within a single variable. You can do this for more than one variable if you wish!
-
+6.Use a boxplot to look at the frequency of different observations within a single variable. You can do this for more than one variable if you wish!
 ```{r}
 # Plot a boxplot of 'concave_points_mean' based on the diagnosis (malignant vs. benign)
 
@@ -245,9 +246,7 @@ ggplot(cancer_sample) +
 
 ```
 
-7.  Make a new tibble with a subset of your data, with variables and observations that you are interested in exploring.
-8.  Use a density plot to explore any of your variables (that are suitable for this type of plot).
-
+8.Use a density plot to explore any of your variables (that are suitable for this type of plot).
 ```{r}
 # Plotting the distribution of 'radius_mean'
 
@@ -293,7 +292,8 @@ ggplot(cancer_sample) + # select the dataset
 
 4. What is the relationship between mean area (area_mean) and the mean of concave points (concave_points_mean) in both malignant and benign tumors?
 
-> This question investigates if a larger tumor tends to have more concave points and which variable is a more reliable indicator of malignancy. 
+> This question investigates if a larger tumor tends to have more concave points and which variable is a more reliable indicator of malignancy.
+
 <!----------------------------->
 
 # Overall reproducibility/Cleanliness/Coherence Checklist 
